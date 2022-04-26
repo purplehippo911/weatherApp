@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+body {
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    background-color: hsl(0, 0%, 13%);
+    font-family: 'Noto Serif', serif;
+    background-image: src("src/freystein.jpg");
+}
+
+
+.card {
+    width:100%;
+    max-width:50rem;
+    padding:2em;
+    border-radius: 30px;
+    background-color: hsl(260, 33%, 91%);
+    margin: 1em;
+}
+
+
+
