@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
+:root {
+    font-size:1205;
+    font-family: 'Noto Serif', serif;
+    --lightGrey:aliceblue;
+    --veryLightGrey: hsl(260, 33%, 91%);
+    --grey:rgba(237, 245, 237, 0.881);
+    --black:hsl(0, 0%, 13%);
+}
 body {
     height:100vh;
     display:flex;
     align-items: center;
     justify-content: center;
     margin:0;
-    background-color: hsl(0, 0%, 13%);
-    font-family: 'Noto Serif', serif;
-    background-image: src("src/freystein.jpg");
+    background-color: var(--black);
+    background-image: url("src/mario2.jpg");
+    background-repeat:no-repeat;
 }
 
 
@@ -17,8 +25,53 @@ body {
     max-width:50rem;
     padding:2em;
     border-radius: 30px;
-    background-color: hsl(260, 33%, 91%);
+    background-color:var(--veryLightGrey);
     margin: 1em;
+}
+
+.search {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#input {
+    width:calc(100% - 80px);
+    border:none;
+    outline:none;
+    padding:0.4em 1em;
+    border-radius: 20px;
+    background-color: var(--lightGrey);
+    color:var(--black);
+    font-family:inherit;
+    font-size:105%;
+}
+
+button {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+    height: 2.4rem;
+    width:2.4rem;
+    border: 0;
+    margin: 0.7em;
+    border-radius: 40%;
+    background-color: var(--grey);
+    cursor:pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color:var(--lightGrey);
+    transform:scale(1.2);
+}
+button > img {
+    height: 2rem;
+}
+
+.temp {
+    margin:0;
 }
 
 
