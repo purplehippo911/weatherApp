@@ -5,14 +5,15 @@ const weather = {
         fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apikey}`
         ).then((response) => response.json())
-        .then(((data) => console.log(data)));
+        .then(((data) => this.displayWeather(data)));
     },
     displayWeather: function(data) {
     const { name } = data;
-    const { main.temp } = data.temp;
-    const { description } = description;
-    const { main.humidity } = data.humidity;
-    const { wind.speed } = windspeed;
-    console.log(data.temp)
+    const { icon, description } = data.weather;
+    const { temp, humidity } = data.main;
+    const { speed } = data.wind;
+    console.log(name, icon, description, temp, humidity, speed )
     }
 };
+
+const button = document.querySelector("button")
