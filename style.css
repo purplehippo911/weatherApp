@@ -72,7 +72,34 @@ button > img {
 
 .temp {
     margin:0;
+    margin-bottom:.4em;
 }
 
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+}   
+
+.description {
+    text-transform: capitalize;
+    margin-left:0.8rem;
+}
+
+.weather.loading {
+    visibility:hidden;
+    max-height: 2rem;
+    position:relative;
+}
+
+.weather.loading:after {
+    visibility:visible;
+    content:"Loading....";
+    color:var(--black);
+    position: absolute;
+    top:0;
+    left:20px;
+}
 
 
